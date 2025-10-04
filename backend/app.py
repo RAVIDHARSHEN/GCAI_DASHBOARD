@@ -6,7 +6,7 @@ import time
 import schedule
 import feedparser
 from datetime import datetime
-from models import init_db, DB_FILE
+from backend.models import init_db, DB_FILE
 
 DB = DB_FILE
 app = Flask(__name__)
@@ -497,3 +497,4 @@ if __name__ == "__main__":
     t = threading.Thread(target=run_scheduler, daemon=True)
     t.start()
     app.run(host="0.0.0.0", port=5000, debug=False)
+
